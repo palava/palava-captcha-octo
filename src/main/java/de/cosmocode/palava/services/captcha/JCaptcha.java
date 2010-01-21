@@ -27,17 +27,19 @@ import org.apache.log4j.Logger;
 
 import com.google.common.base.Preconditions;
 import com.google.inject.Inject;
+import com.google.inject.Singleton;
 import com.octo.captcha.service.CaptchaServiceException;
 import com.octo.captcha.service.image.ImageCaptchaService;
-import com.sun.image.codec.jpeg.ImageFormatException;
 import com.sun.image.codec.jpeg.JPEGCodec;
 import com.sun.image.codec.jpeg.JPEGImageEncoder;
 
 /**
- * capctha implementation based on jcaptcha.
+ * Capctha implementation based on jcaptcha.
  *
+ * @author Willi Schoenborn
  */
-public class JCaptcha implements Captcha {
+@Singleton
+final class JCaptcha implements Captcha {
 
     private static final Logger log = Logger.getLogger(JCaptcha.class);
 
@@ -58,12 +60,8 @@ public class JCaptcha implements Captcha {
         try {
             jpegEncoder.encode(challenge);
             return jpegOutputStream.toByteArray();    
-        } catch (ImageFormatException e) {
-            log.error("cannot convert captcha to jpeg", e);
-            return null;
         } catch (IOException e) {
-            log.error("cannot convert captcha to jpeg", e);
-            return null;
+            throw new IllegalArgumentException(e);
         }
     }
 
