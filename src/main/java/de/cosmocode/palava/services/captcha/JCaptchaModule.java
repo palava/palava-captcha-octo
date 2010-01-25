@@ -19,14 +19,14 @@
 
 package de.cosmocode.palava.services.captcha;
 
-import de.cosmocode.palava.core.inject.AbstractApplicationModule;
+import de.cosmocode.palava.core.inject.PalavaModule;
 
 /**
  * Binds the {@link JCaptcha} implementation to the {@link Captcha} interface.
  *
  * @author Willi Schoenborn
  */
-public final class JCaptchaModule extends AbstractApplicationModule {
+public final class JCaptchaModule extends PalavaModule {
 
     @Override
     protected void configureApplication() {
