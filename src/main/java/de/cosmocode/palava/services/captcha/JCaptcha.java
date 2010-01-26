@@ -46,7 +46,7 @@ final class JCaptcha implements Captcha {
     private final ImageCaptchaService service;
     
     @Inject
-    public JCaptcha(ImageCaptchaService service) {
+    public JCaptcha(CaptchaService service) {
         this.service = Preconditions.checkNotNull(service, "Service");
     }
     
