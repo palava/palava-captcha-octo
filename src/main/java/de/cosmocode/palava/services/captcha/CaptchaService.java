@@ -52,8 +52,8 @@ import com.octo.captcha.service.captchastore.FastHashMapCaptchaStore;
 import com.octo.captcha.service.image.DefaultManageableImageCaptchaService;
 import com.octo.captcha.service.image.ImageCaptchaService;
 
+import de.cosmocode.palava.core.Service;
 import de.cosmocode.palava.core.lifecycle.Initializable;
-import de.cosmocode.palava.core.service.Service;
 
 /**
  * A {@link Service} which provides captcha methods.
