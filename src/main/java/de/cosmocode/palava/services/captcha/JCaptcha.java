@@ -41,7 +41,7 @@ import com.sun.image.codec.jpeg.JPEGImageEncoder;
 @Singleton
 final class JCaptcha implements Captcha {
 
-    private static final Logger log = Logger.getLogger(JCaptcha.class);
+    private static final Logger LOG = Logger.getLogger(JCaptcha.class);
 
     private final ImageCaptchaService service;
     
@@ -70,7 +70,7 @@ final class JCaptcha implements Captcha {
         try {
             return service.validateResponseForID(id, userInput);
         } catch (CaptchaServiceException e) {
-            log.error("validation falied", e);
+            LOG.error("validation falied", e);
             return false;
         }
     }
