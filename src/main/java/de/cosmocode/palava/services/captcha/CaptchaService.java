@@ -79,10 +79,8 @@ final class CaptchaService implements Service, ImageCaptchaService, Initializabl
     @Named("captcha.wavelength")
     private double wavelength = 70d;
     
-    // TODO: configure color by name
     private final Color textColor = Color.black;
     
-    // TODO: configure color by name
     private Color bgColor = Color.white;
 
     @Inject(optional = true)
