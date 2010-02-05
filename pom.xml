@@ -8,7 +8,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>de.cosmocode.palava.services</groupId>
   <artifactId>palava-captcha-octo</artifactId>
-  <name>Palava JCaptcha</name>
+  <name>Palava Captcha JCaptcha</name>
   <scm>
   	<developerConnection>scm:svn:http://palava.svn.cosmocode.de/palava-captcha-octo/trunk</developerConnection>
   </scm>
