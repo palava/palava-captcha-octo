@@ -60,7 +60,6 @@ import de.cosmocode.palava.core.lifecycle.Initializable;
  *
  * @author Willi Schoenborn
  */
-@Singleton
 final class CaptchaService implements Service, ImageCaptchaService, Initializable {
     
     @Inject(optional = true)
