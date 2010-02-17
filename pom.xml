@@ -6,7 +6,7 @@
     <version>2.0-SNAPSHOT</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
-  <groupId>de.cosmocode.palava.services</groupId>
+  <groupId>de.cosmocode.palava</groupId>
   <artifactId>palava-captcha-octo</artifactId>
   <name>Palava Captcha JCaptcha</name>
   <scm>
@@ -14,7 +14,7 @@
   </scm>
   <dependencies>
       <dependency>
-          <groupId>de.cosmocode.palava.services</groupId>
+          <groupId>de.cosmocode.palava</groupId>
           <artifactId>palava-captcha</artifactId>
           <version>2.0-SNAPSHOT</version>
       </dependency>
