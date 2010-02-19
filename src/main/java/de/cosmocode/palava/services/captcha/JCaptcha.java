@@ -38,6 +38,7 @@ import com.sun.image.codec.jpeg.JPEGImageEncoder;
  *
  * @author Willi Schoenborn
  */
+@Singleton
 final class JCaptcha implements Captcha {
 
     private static final Logger LOG = Logger.getLogger(JCaptcha.class);

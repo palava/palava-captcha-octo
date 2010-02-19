@@ -19,19 +19,21 @@
 
 package de.cosmocode.palava.services.captcha;
 
-import de.cosmocode.palava.bridge.inject.AbstractApplication;
+import com.google.inject.Binder;
+import com.google.inject.Module;
+import com.google.inject.Singleton;
 
 /**
  * Binds the {@link JCaptcha} implementation to the {@link Captcha} interface.
  *
  * @author Willi Schoenborn
  */
-public final class JCaptchaModule extends AbstractApplication {
+public final class JCaptchaModule implements Module {
 
     @Override
-    protected void configureApplication() {
-        serve(CaptchaService.class).with(CaptchaService.class);
-        serve(Captcha.class).with(JCaptcha.class);
+    public void configure(Binder binder) {
+        binder.bind(CaptchaService.class).in(Singleton.class);
+        binder.bind(Captcha.class).to(JCaptcha.class);
     }
 
 }
