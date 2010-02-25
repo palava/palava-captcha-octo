@@ -25,7 +25,6 @@ import java.awt.image.ImageFilter;
 import java.util.Locale;
 
 import com.google.inject.Inject;
-import com.google.inject.Singleton;
 import com.google.inject.name.Named;
 import com.jhlabs.image.WaterFilter;
 import com.octo.captcha.component.image.backgroundgenerator.BackgroundGenerator;
