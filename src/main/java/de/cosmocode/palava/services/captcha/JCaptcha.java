@@ -23,7 +23,8 @@ import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.google.common.base.Preconditions;
 import com.google.inject.Inject;
@@ -36,12 +37,12 @@ import com.sun.image.codec.jpeg.JPEGImageEncoder;
 /**
  * Capctha implementation based on jcaptcha.
  *
- * @author Willi Schoenborn
+ * @author Detlef Huettemann
  */
 @Singleton
 final class JCaptcha implements Captcha {
 
-    private static final Logger LOG = Logger.getLogger(JCaptcha.class);
+    private static final Logger LOG = LoggerFactory.getLogger(JCaptcha.class);
 
     private final ImageCaptchaService service;
     
