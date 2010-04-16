@@ -23,17 +23,18 @@ import com.google.inject.Binder;
 import com.google.inject.Module;
 import com.google.inject.Singleton;
 
+import de.cosmocode.palava.captcha.CaptchaService;
+
 /**
- * Binds the {@link JCaptcha} implementation to the {@link Captcha} interface.
+ * Binds the {@link CaptchaService} to the {@link JCaptchaService}.
  *
  * @author Willi Schoenborn
  */
-public final class JCaptchaModule implements Module {
+public final class JCaptchaServiceModule implements Module {
 
     @Override
     public void configure(Binder binder) {
-        binder.bind(CaptchaService.class).in(Singleton.class);
-        binder.bind(Captcha.class).to(JCaptcha.class);
+        binder.bind(CaptchaService.class).to(JCaptchaService.class).in(Singleton.class);
     }
 
 }
