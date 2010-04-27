@@ -63,6 +63,8 @@ import de.cosmocode.palava.core.lifecycle.Initializable;
  *
  * @author Willi Schoenborn
  */
+// that's a big todo
+@SuppressWarnings("restriction")
 public final class JCaptchaService implements CaptchaService, ImageCaptchaService, Initializable {
 
     private static final Logger LOG = LoggerFactory.getLogger(JCaptchaService.class);
